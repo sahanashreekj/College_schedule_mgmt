@@ -1,0 +1,163 @@
+{{>edittab}}
+{{#if alert}}
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+  {{alert}}
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{{/if}}
+
+<div class="table-wrapper">
+    <table class="table table-dark table-hover tab-one">
+  <thead>
+    <th scope="col"><div class="he">Session</div></th>
+    <th scope="col"><div class="he">Monday</div></th>
+    
+
+    
+  </thead>
+  <tbody>
+    {{#each rowsa}}
+    <tr>
+    
+     <th scope='row'class="table-active "><div class="xr">{{this.session}}</div></th>
+     <td class="table-active "><div class="xr">{{this.mon}}</div></td>
+      
+    </tr>
+  {{/each}}
+   <form method="get" action="/editmon">
+    <th scope="col"><div class="he"></div></th>
+    <td class="able-active ">
+     <button class="btn btn-dark btn-small"><i class="bi bi-pencil"></i>Edit</button>
+     </td>
+     </form>
+  </tbody>
+</table>
+
+<table class="table table-dark table-hover tab-one">
+  <thead>
+    <th scope="col"><div class="he">Session</div></th>
+    <th scope="col"><div class="he">Tuesday</div></th>
+ </thead>
+  <tbody>
+    {{#each rowsb}}
+    <tr>
+    
+     <th scope='row'class="table-active "><div class="xr">{{this.session}}</div></th>
+     <td class="table-active "><div class="xr">{{this.tue}}</div></td>
+     
+    </tr>
+  {{/each}}
+   <form method="get" action="/edittue">
+    <th scope="col"><div class="he"></div></th>
+    <td class="able-active ">
+     <button class="btn btn-dark btn-small"><i class="bi bi-pencil"></i>Edit</button>
+     </td>
+     </form>
+  </tbody>
+</table>
+
+
+<table class="table table-dark table-hover tab-one">
+  <thead>
+    <th scope="col"><div class="he">Session</div></th>
+    <th scope="col"><div class="he">Wednesday</div></th>
+  
+    
+  </thead>
+  <tbody>
+    {{#each rowsc}}
+    <tr>
+    
+     <th scope='row'class="table-active "><div class="xr">{{this.session}}</div></th>
+     <td class="table-active "><div class="xr">{{this.wed}}</div></td>
+      
+    </tr>
+  {{/each}}
+    <th scope="col"><div class="he"></div></th>
+   
+   <form method="get" action="/editwed">
+  <td class="able-active">
+     <button class="btn btn-dark btn-small"><i class="bi bi-pencil"></i>Edit</button>
+     </td>
+   </form>
+  </tbody>
+</table>
+</div>
+
+<div class="table-wrapperx">
+  <table class="table table-dark table-hover tab-one">
+  <thead>
+    <th scope="col"><div class="he">Session</div></th>
+    <th scope="col"><div class="he">Thursday</div></th>
+<form method="post" action="/editthu">
+    
+  </thead>
+  <tbody>
+    {{#each rows1}}
+    <tr>
+    
+     <th scope='row'class="table-active "><div class="xr">1</div></th>
+     <td class="table-active "><input name='sone'style= 'white-space: pre' class ="xr" value= "{{this.thu}}"></td>
+      
+    </tr>
+  {{/each}}
+  {{#each rows2}}
+    <tr>
+    
+     <th scope='row'class="table-active "><div class="xr">2</div></th>
+     <td class="table-active "><input name='stwo'style= 'white-space: pre' class ="xr" value= "{{this.thu}}"></td>
+      
+    </tr>
+  {{/each}}
+  {{#each rows3}}
+    <tr>
+    
+     <th scope='row'class="table-active "><div class="xr">3</div></th>
+     <td class="table-active "><input name='sthree'style= 'white-space: pre' class ="xr" value= "{{this.thu}}"></td>
+      
+    </tr>
+  {{/each}}
+  {{#each rows4}}
+    <tr>
+    
+     <th scope='row'class="table-active "><div class="xr">4</div></th>
+     <td class="table-active "><input type='text'name="sfour" style= 'white-space: pre' class ="xr" value= "{{this.thu}}"></td>
+      
+    </tr>
+  {{/each}}
+    <th scope="col"><div class="he"></div></th>
+    <td class="able-active ">
+     <button class="btn btn-dark btn-small" type="submit">SAVE</button>
+     </td>
+     </form>
+  </tbody>
+</table>
+
+<table class="table table-dark table-hover tab-one">
+  <thead>
+    <th scope="col"><div class="he">Session</div></th>
+    <th scope="col"><div class="he">Friday</div></th>
+    
+  </thead>
+  <tbody>
+    {{#each rowse}}
+    <tr>
+    
+     <th scope='row'class="table-active "><div class="xr">{{this.session}}</div></th>
+     <td class="table-active "><div class="xr">{{this.fri}}</div></td>
+      
+  {{/each}}
+
+    </tr>
+    <th scope="col"><div class="he"></div></th>
+   <form method="get" action="/editfri">
+    <td class="able-active">
+     <button class="btn btn-dark btn-small"><i class="bi bi-pencil"></i>Edit</button>
+     </td>
+     </form>
+  </tbody>
+</table>
+
+
+</div>
+

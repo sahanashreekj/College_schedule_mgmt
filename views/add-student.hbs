@@ -1,0 +1,12 @@
+{{>adminpages}}
+
+{{#if alert}}
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+  {{alert}}
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{{/if}}
+<form method="post" action="/addstudent" novalidate>
+{{>studentdetails-form}}
+<button type="submit" class="btn btn-primary formdet">Submit</button>
+</form>

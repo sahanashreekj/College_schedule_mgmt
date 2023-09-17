@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="/css/styled.css">
+       <link rel="stylesheets" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+       <script src="https://kit.fontawesome.com/28e44b594f.js" crossorigin="anonymous"></script>
+       <title></title>
+    </head>
+    
+    <body>
+       
+        <div class="flexer">
+        <div class="wrapper">
+            <header>Faculty Login</header>
+            <form method="post" action="/faclogin" target="_blank">
+                <div class="field-username">
+                 <div class="input-area">
+                    <input type="text" placeholder="Your username"> 
+                    <i class="icon fa fa-user-circle"></i>    
+                    <i id="err" class="  err-icon fas fa-exclamation-circle"></i> 
+                </div>  
+                 <div class=" error-txt">Username can't be blank.</div> 
+                    
+                </div>
+                <div class="field-password">
+                    <div class="input-area">
+                        <input type="password" placeholder="Password" name="idf">
+                        <i class="icon fas fa-lock"></i>
+                        <i id="err" class="err-icon fas fa-exclamation-circle"></i>
+
+                    </div>
+                    <div id="err"class=" error-txt">Oops!Password please.</div> 
+                </div>
+                <div class="pass-link"><a href="#">Forgot password?</a></div>
+            
+                <input type="submit" value="Log in">
+    
+            </form>
+            <div class="Contact-admin">Having trouble logging in?<a href="#">Contact Us</a></div>
+        </div>
+        </div>
+    </body>
+</html>

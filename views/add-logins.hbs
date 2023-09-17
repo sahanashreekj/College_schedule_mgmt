@@ -1,0 +1,38 @@
+{{>adminpages}}
+
+{{#if alert}}
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+  {{alert}}
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{{/if}}
+<form method="post" action="/addlogins" novalidate>
+<div class="formdet">
+<div class="input-group mb-3">
+  <span class="input-group-text" id="inputGroup-sizing-default">User-name</span>
+  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" name='user'>
+</div>
+<div class="input-group mb-3">
+  <span class="input-group-text" id="inputGroup-sizing-default">Sem</span>
+  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" name="sem">
+</div>
+<div class="input-group mb-3">
+  <span class="input-group-text" id="inputGroup-sizing-default">Branch</span>
+  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" name="brc">
+</div>
+<div class="input-group mb-3">
+  <span class="input-group-text" id="inputGroup-sizing-default">Password</span>
+  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" name="pas">
+</div>
+<div class="input-group mb-3">
+  <span class="input-group-text" id="inputGroup-sizing-default">Class Representative-1</span>
+  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" name="cra">
+</div>
+<div class="input-group mb-3">
+  <span class="input-group-text" id="inputGroup-sizing-default">Class Representative-1</span>
+  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" name="crb">
+</div>
+
+</div>
+<button type="submit" class="btn btn-primary formdet">Submit</button>
+</form>

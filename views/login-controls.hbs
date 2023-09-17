@@ -1,0 +1,36 @@
+{{>adminpages}}
+<div class="adhm">
+<div class="row">
+  <div class="col-6"><h2>Login details</h2></div>
+  <div class="col-6 d-flex justify-content-end">
+    <a href="/addlogins" type="button" class="btn btn-primary align-self-center">+ Add </a>
+  </div>
+</div>
+<table class="table table-dark table-striped">
+  <thead>
+    <tr>
+      <th scope="col">User</th>
+      <th scope="col">Branch</th>
+      <th scope="col">Sem</th>
+      <th scope="col">Password</th>
+      <th scope="col">Representative:1</th>
+      <th scope="col">Representative:2</th>
+      
+    
+    </tr>
+  </thead>
+  <tbody>
+    {{#each rows}}
+    <tr>
+      <th scope="row">{{this.user}}</th>
+      <td>{{this.branch}}</td>
+      <td>{{this.sem}}</td>
+      <td>{{this.password}}</td>
+      <td>{{this.cra}}</td>
+      <td>{{this.crb}}</td>
+
+    </tr>
+    {{/each}}
+     </div> 
+  </tbody>
+</table>

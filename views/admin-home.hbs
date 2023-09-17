@@ -1,0 +1,32 @@
+{{>adminpages}}
+<div class="adhm">
+<div class="row">
+  <div class="col-6"><h2>Student details</h2></div>
+  <div class="col-6 d-flex justify-content-end">
+    <a href="/addstudent" type="button" class="btn btn-primary align-self-center">+ Add </a>
+  </div>
+</div>
+<table class="table table-dark table-striped">
+  <thead>
+    <tr>
+      <th scope="col">USN</th>
+      <th scope="col">Branch</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Phone</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each rows}}
+    <tr>
+      <th scope="row">{{this.usn}}</th>
+      <td>{{this.branch}}</td>
+      <td>{{this.name}}</td>
+      <td>{{this.email}}</td>
+      <td>{{this.phone}}</td>
+
+    </tr>
+    {{/each}}
+     </div> 
+  </tbody>
+</table>

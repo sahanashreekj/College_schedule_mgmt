@@ -1,0 +1,123 @@
+
+ <nav>
+        <a href="/">Home</a>
+        <a href="/schedule">Schedule</a>
+        <a href="/pinboard">pinboard</a>
+        <a href="/contact">Contact</a>
+        <a style="margin-left:65%" href="/adminlogin"><i class="bi bi-file-person-fill"></i></a>
+        <div class="animation start-schedule"></div>
+    </nav>
+   <div class="fac">
+  <div>
+   <h5 >If you are a faculty,follow the link below to get your schedule details.</h5>
+   <a  href="/faclogin" target="_blank">Faculty login portal</a>
+   </div>
+   
+   </div>
+
+<div class="box-info">
+      
+    <form  role="search" method="post" action="/schedule" novalidate>
+
+   <div class="ip-txt">Fill your specifics to get your schedule</div>
+   <div class="ip">
+   <div class="ip-in"><b>BRANCH: </b><input type="text" name="branchName" class='in-info'placeholder=e.g:ISE,ECE,CSE.,></div> 
+   <div class="ip-in"><b>YEAR: </b><input type="text"class='in-info' placeholder=e.g:first,second.,></div> 
+   <div class="ip-in"><b>SEM: </b><input type="text" class='in-info'placeholder=e.g:1,2,3,4.,></div> 
+   <div><button type="submit" class="in-info button">Get my schedule!</button></div>
+ </div>
+ </form>
+</div>
+
+<div class="table-wrap">
+<div class="tab-one">
+
+{{#if shoot}}
+<table class="table table-dark table-hover tab-one">
+  <thead>
+    <th scope="col"><div class="he">Session</div></th>
+    <th scope="col"><div class="he">Monday</div></th>
+  </thead>
+  <tbody>
+    <tr>
+    {{#each rowsa}}
+    
+     <th scope='row'class="table-active "><div class="he">{{this.session}}</div></th>
+     <td class="table-active "><div class="he">{{this.mon}}</div></td>
+    </tr>
+
+    {{/each}}
+  </tbody>
+</table>
+</div>
+<div class="tab-two">
+  <table class="table table-dark table-hover tab-two">
+  <thead>
+  <th scope="col"><div class="he">Tuesday</div></th>
+    
+  </thead>
+  <tbody>
+    <tr>
+  {{#each rowsb}}
+    
+    <td class="table-active "><div class="he">{{this.tue}}</div></td>
+    
+    </tr>
+  </tbody>
+  {{/each}}
+
+</table>
+
+</div>
+
+<div class="tab-two">
+  <table class="table table-dark table-hover tab-two">
+  <thead>
+    <th scope="col"><div class="he">Wednesday</div></th>   
+  </thead>
+  <tbody>
+    <tr>
+  {{#each rowsc}}
+
+    <td class="table-active "><div class="he">{{this.wed}}</div></td>
+    </tr>
+  </tbody>
+  {{/each}}
+ </table>
+</div>
+
+<div class="tab-two">
+  <table class="table table-dark table-hover tab-two">
+  <thead>
+  <th scope="col"><div class="he">Thursday</div></th>
+  </thead>
+  <tbody>
+    <tr>
+  {{#each rowsd}}
+
+    <td class="table-active "><div class="he">{{this.thu}}</div></td>
+    </tr>
+  </tbody>
+    {{/each}}
+</table>
+</div>
+
+
+<div class="tab-two">
+  <table class="table table-dark table-hover tab-two">
+  <thead>
+    <th scope="col"><div class="he">Friday</div></th>
+  </thead>
+  <tbody>
+    <tr>
+  {{#each rowse}}
+
+    <td class="table-active "><div class="he">{{this.fri}}</div></td>
+    </tr>
+  </tbody>
+    {{/each}}
+</table>
+</div>
+{{/if}}  
+
+</div>
